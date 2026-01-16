@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">&lt;DEV/&gt;</div>
+    <nav>
+      <a href="#sobre">Sobre mi</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hola, soy Javier un <span>Desarrollador Web</span></h1>
+      <h2 id="typing"></h2>
+
+      <div class="cta">
+        <a href="#projects">Ver proyectos</a>
+        <a href="#contact" class="outline">Contactar</a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <img src="./img/banner.jpg" alt="Código Binario Animado" class="profile-image" />
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <h2 data-aos="fade-up">Sobre mí</h2>
+    <p data-aos="fade-up" data-aos-delay="100">
+      Soy Javier, un desarrollador que disfruta transformando ideas en código funcional.
+      Me interesa construir interfaces que no solo se vean bien, sino que resuelvan problemas reales.
+      Cuando no estoy depurando código, probablemente estoy explorando nuevas herramientas o
+      mejorando proyectos existentes.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 data-aos="fade-up">Habilidades</h2>
+
+    <div class="skills-wrapper">
+      <div class="skill-box soft" data-aos="fade-up" data-aos-delay="200">
+        <h3>🤝 Habilidades Blandas</h3>
+        <p>Claves para trabajar en equipo y entregar resultados.</p>
+
+        <ul>
+          <li>Comunicación clara y efectiva</li>
+          <li>Trabajo en equipo</li>
+          <li>Resolución de problemas</li>
+          <li>Aprendizaje autodidacta</li>
+          <li>Responsabilidad y organización</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tecnologías con Conocimiento -->
+    <div class="tech-skills-section" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="tech-skills-title">💻 Tecnologías que manejo</h3>
+      <p class="tech-skills-subtitle">Lenguajes, frameworks y herramientas con las que tengo experiencia</p>
+
+      <!-- Lenguajes -->
+      <div class="tech-category">
+        <h4 class="category-title">Lenguajes</h4>
+        <div class="tech-badges-grid">
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="100">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python" />
+            <span class="tech-name">Python</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="150">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              alt="PHP" />
+            <span class="tech-name">PHP</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="200">
+            <img class="tech-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript" />
+            <span class="tech-name">JavaScript</span>
+          </div>
+
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="350">
+            <img class="tech-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+              alt="TypeScript" />
+            <span class="tech-name">TypeScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frameworks -->
+      <div class="tech-category">
+        <h4 class="category-title">Frameworks y Librerías</h4>
+        <div class="tech-badges-grid">
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="100">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+              alt="Vue.js" />
+            <span class="tech-name">Vue.js</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="150">
+            <img class="tech-icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
+            <span class="tech-name">Angular</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="200">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js" />
+            <span class="tech-name">Node.js</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="250">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+              alt="Laravel" />
+            <span class="tech-name">Laravel</span>
+          </div>
+
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="350">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              alt="Express" />
+            <span class="tech-name">Express</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Herramientas -->
+      <div class="tech-category">
+        <h4 class="category-title">Herramientas y Control de Versiones</h4>
+        <div class="tech-badges-grid">
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="100">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git" />
+            <span class="tech-name">Git</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="150">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub" />
+            <span class="tech-name">GitHub</span>
+          </div>
+
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="300">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB" />
+            <span class="tech-name">MongoDB</span>
+          </div>
+          <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="350">
+            <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="MySQL" />
+            <span class="tech-name">MySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 data-aos="fade-up">Proyectos</h2>
+
+    <div class="projects-grid">
+      <!-- Proyecto -->
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="project-header">
+          <h3>Plataforma de virtualizacion</h3>
+          <span class="status finished">Casi terminado</span>
+        </div>
+
+        <p class="project-desc">
+          Plataforma de aprendizaje (moodle) con la posibilidad de crear cursos, 
+          agregar materiales, agregar alumnos, agregar profesores, etc.
+          También tiene la posibilidad de crear tareas, presentaciones, etc.
+          También tiene la posibilidad de crear foros, chat, etc.
+          También tiene la posibilidad de crear grupos, etc.
+          También tiene la posibilidad de crear notificaciones, etc.
+        </p>
+
+        <!-- Tecnologías -->
+        <div class="tech-badges">
+          <span>Laravel</span>
+          <span>MySQL</span>
+          <span>LiveWire</span>
+
+        </div>
+
+        <div class="project-links">
+          <a href="#">Demo</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Proyecto en progreso -->
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="project-header">
+          <h3>Sistema de Stremming con WebRTC</h3>
+          <span class="status progress">En progreso</span>
+        </div>
+
+        <p class="project-desc">
+          Aplicación que usa ApiRest para la creación de una sala de chat 
+          y la conexión de usuarios a la misma.
+          Funciones de chats privados, grupales, reuniones de streamming, llamadas de audio y video.
+          Usa WebRTC para la conexión de usuarios a la misma.
+          Usa WebSocket para la comunicación entre usuarios.
+        </p>
+
+        <div class="tech-badges">
+          <span>Vue</span>
+          <span>Node Js</span>
+          <span>WebRTC</span>
+          <span>WebSocket</span>
+          <span>ApiRest</span>
+        </div>
+
+        <div class="project-links">
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contact">
+    <div class="footer-content" data-aos="fade-up">
+      <h2>Contacto</h2>
+      <p class="footer-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+
+      <div class="contact-links">
+        <a href="mailto:javier.xcn18@gmail.com" class="contact-item" data-aos="zoom-in" data-aos-delay="100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Email</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" class="contact-item"
+          data-aos="zoom-in" data-aos-delay="200">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/vax-02" target="_blank" rel="noopener noreferrer" class="contact-item"
+          data-aos="zoom-in" data-aos-delay="300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Desarrollador Web. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
