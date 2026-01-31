@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -24,10 +24,19 @@
   <header>
     <div class="logo">&lt;DEV/&gt;</div>
     <nav>
-      <a href="#sobre">Sobre mi</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#contact">Contacto</a>
+      <a href="#sobre" data-en="About" data-es="Sobre mi">About</a>
+      <a href="#skills" data-en="Skills" data-es="Skills">Skills</a>
+      <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+      <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+      <button id="langToggle" class="lang-toggle" aria-label="Toggle Language">
+        <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">ES</span>
+      </button>
     </nav>
 
   </header>
@@ -35,57 +44,67 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Hola, soy Javier un <span>Desarrollador Web</span></h1>
+      <h1 data-en="Hi, I'm Javier a <span>Web Developer</span>"
+        data-es="Hola, soy Javier un <span>Desarrollador Web</span>">Hi, I'm Javier a <span>Web Developer</span></h1>
       <h2 id="typing"></h2>
 
       <div class="cta">
-        <a href="#projects">Ver proyectos</a>
-        <a href="#contact" class="outline">Contactar</a>
+        <a href="#projects" data-en="View Projects" data-es="Ver proyectos">View Projects</a>
+        <a href="#contact" class="outline" data-en="Contact" data-es="Contactar">Contact</a>
       </div>
     </div>
 
     <div class="profile">
-      <img src="./img/banner.jpg" alt="Código Binario Animado" class="profile-image" />
+      <img src="./img/robot.avif" alt="Animated Binary Code" class="profile-image" />
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- ABOUT -->
   <section id="sobre">
-    <h2 data-aos="fade-up">Sobre mí</h2>
-    <p data-aos="fade-up" data-aos-delay="100">
-      Soy Javier, un desarrollador que disfruta transformando ideas en código funcional.
-      Me interesa construir interfaces que no solo se vean bien, sino que resuelvan problemas reales.
-      Cuando no estoy depurando código, probablemente estoy explorando nuevas herramientas o
-      mejorando proyectos existentes.
+    <h2 data-aos="fade-up" data-en="About Me" data-es="Sobre mí">About Me</h2>
+    <p data-aos="fade-up" data-aos-delay="100"
+      data-en="I'm Javier, a developer who enjoys transforming ideas into functional code. I'm interested in building interfaces that not only look good, but solve real problems. When I'm not debugging code, I'm probably exploring new tools or improving existing projects."
+      data-es="Soy Javier, un desarrollador que disfruta transformando ideas en código funcional. Me interesa construir interfaces que no solo se vean bien, sino que resuelvan problemas reales. Cuando no estoy depurando código, probablemente estoy explorando nuevas herramientas o mejorando proyectos existentes.">
+      I'm Javier, a developer who enjoys transforming ideas into functional code.
+      I'm interested in building interfaces that not only look good, but solve real problems.
+      When I'm not debugging code, I'm probably exploring new tools or
+      improving existing projects.
     </p>
   </section>
 
   <section id="skills">
-    <h2 data-aos="fade-up">Habilidades</h2>
+    <h2 data-aos="fade-up" data-en="Skills" data-es="Habilidades">Skills</h2>
 
     <div class="skills-wrapper">
       <div class="skill-box soft" data-aos="fade-up" data-aos-delay="200">
-        <h3>🤝 Habilidades Blandas</h3>
-        <p>Claves para trabajar en equipo y entregar resultados.</p>
+        <h3 data-en="🤝 Soft Skills" data-es="🤝 Habilidades Blandas">🤝 Soft Skills</h3>
+        <p data-en="Key to working in teams and delivering results."
+          data-es="Claves para trabajar en equipo y entregar resultados.">Key to working in teams and delivering
+          results.</p>
 
         <ul>
-          <li>Comunicación clara y efectiva</li>
-          <li>Trabajo en equipo</li>
-          <li>Resolución de problemas</li>
-          <li>Aprendizaje autodidacta</li>
-          <li>Responsabilidad y organización</li>
+          <li data-en="Clear and effective communication" data-es="Comunicación clara y efectiva">Clear and effective
+            communication</li>
+          <li data-en="Teamwork" data-es="Trabajo en equipo">Teamwork</li>
+          <li data-en="Problem solving" data-es="Resolución de problemas">Problem solving</li>
+          <li data-en="Self-taught learning" data-es="Aprendizaje autodidacta">Self-taught learning</li>
+          <li data-en="Responsibility and organization" data-es="Responsabilidad y organización">Responsibility and
+            organization</li>
         </ul>
       </div>
     </div>
 
-    <!-- Tecnologías con Conocimiento -->
+    <!-- Technologies with Knowledge -->
     <div class="tech-skills-section" data-aos="fade-up" data-aos-delay="300">
-      <h3 class="tech-skills-title">💻 Tecnologías que manejo</h3>
-      <p class="tech-skills-subtitle">Lenguajes, frameworks y herramientas con las que tengo experiencia</p>
+      <h3 class="tech-skills-title" data-en="💻 Technologies I Handle" data-es="💻 Tecnologías que manejo">💻
+        Technologies I Handle</h3>
+      <p class="tech-skills-subtitle" data-en="Languages, frameworks and tools I have experience with"
+        data-es="Lenguajes, frameworks y herramientas con las que tengo experiencia">Languages, frameworks and tools I
+        have experience with</p>
 
-      <!-- Lenguajes -->
+      <!-- Languages -->
       <div class="tech-category">
-        <h4 class="category-title">Lenguajes</h4>
+        <h4 class="category-title" data-en="Languages" data-es="Lenguajes">Languages</h4>
         <div class="tech-badges-grid">
           <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="100">
             <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
@@ -115,7 +134,8 @@
 
       <!-- Frameworks -->
       <div class="tech-category">
-        <h4 class="category-title">Frameworks y Librerías</h4>
+        <h4 class="category-title" data-en="Frameworks and Libraries" data-es="Frameworks y Librerías">Frameworks and
+          Libraries</h4>
         <div class="tech-badges-grid">
           <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="100">
             <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
@@ -146,9 +166,10 @@
         </div>
       </div>
 
-      <!-- Herramientas -->
+      <!-- Tools -->
       <div class="tech-category">
-        <h4 class="category-title">Herramientas y Control de Versiones</h4>
+        <h4 class="category-title" data-en="Tools and Version Control" data-es="Herramientas y Control de Versiones">
+          Tools and Version Control</h4>
         <div class="tech-badges-grid">
           <div class="tech-badge-item" data-aos="zoom-in" data-aos-delay="100">
             <img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
@@ -177,26 +198,34 @@
   </section>
 
   <section id="projects">
-    <h2 data-aos="fade-up">Proyectos</h2>
+    <h2 data-aos="fade-up" data-en="Projects" data-es="Proyectos">Projects</h2>
 
     <div class="projects-grid">
-      <!-- Proyecto -->
+      <!-- Project -->
       <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
         <div class="project-header">
-          <h3>Plataforma de virtualizacion</h3>
-          <span class="status finished">Casi terminado</span>
+          <h3 data-en="Virtualization Platform" data-es="Plataforma de virtualizacion">Virtualization Platform</h3>
+          <span class="status finished" data-en="In Progress" data-es="En progreso">In Progress</span>
         </div>
 
-        <p class="project-desc">
-          Plataforma de aprendizaje (moodle) con la posibilidad de crear cursos, 
-          agregar materiales, agregar alumnos, agregar profesores, etc.
-          También tiene la posibilidad de crear tareas, presentaciones, etc.
-          También tiene la posibilidad de crear foros, chat, etc.
-          También tiene la posibilidad de crear grupos, etc.
-          También tiene la posibilidad de crear notificaciones, etc.
+        <p class="project-desc collapsed"
+          data-en="Learning platform (Moodle) that allows creating courses, adding educational materials, enrolling students and assigning teachers. It offers functionalities to manage tasks, presentations and other academic activities. It includes tools to create forums, chats and other interaction spaces among users. Additionally, it enables the formation of work groups, sending notifications and managing various communication and collaboration functions within the educational environment."
+          data-es="Plataforma de aprendizaje (Moodle) que permite crear cursos, agregar materiales educativos, matricular estudiantes y asignar profesores. Ofrece funcionalidades para gestionar tareas, presentaciones y otras actividades académicas. Incluye herramientas para crear foros, chats y otros espacios de interacción entre los usuarios. Además, posibilita la formación de grupos de trabajo, el envío de notificaciones y la administración de diversas funciones de comunicación y colaboración dentro del entorno educativo.">
+          Learning platform (Moodle) that allows creating courses, adding educational materials, enrolling
+          students and assigning teachers. It offers functionalities to manage tasks, presentations and other
+          academic activities. It includes tools to create forums, chats and other interaction spaces among
+          users. Additionally, it enables the formation of work groups, sending notifications and managing
+          various communication and collaboration functions within the educational environment.
         </p>
+        <button class="toggle-desc" data-en="Read more" data-es="Leer más">
+          <span class="toggle-text">Read more</span>
+          <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
 
-        <!-- Tecnologías -->
+        <!-- Technologies -->
         <div class="tech-badges">
           <span>Laravel</span>
           <span>MySQL</span>
@@ -205,25 +234,34 @@
         </div>
 
         <div class="project-links">
-          <a href="#">Demo</a>
+          <a href="#" class="open-gallery" data-project="virtualization" data-en="Demo" data-es="Demo">Demo</a>
           <a href="#">GitHub</a>
         </div>
       </div>
 
-      <!-- Proyecto en progreso -->
+      <!-- Project in progress -->
       <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
         <div class="project-header">
-          <h3>Sistema de Stremming con WebRTC</h3>
-          <span class="status progress">En progreso</span>
+          <h3 data-en="Streaming System with WebRTC" data-es="Sistema de Stremming con WebRTC">Streaming System with
+            WebRTC</h3>
+          <span class="status progress" data-en="In Progress" data-es="En progreso">In Progress</span>
         </div>
 
-        <p class="project-desc">
-          Aplicación que usa ApiRest para la creación de una sala de chat 
-          y la conexión de usuarios a la misma.
-          Funciones de chats privados, grupales, reuniones de streamming, llamadas de audio y video.
-          Usa WebRTC para la conexión de usuarios a la misma.
-          Usa WebSocket para la comunicación entre usuarios.
+        <p class="project-desc collapsed"
+          data-en="Application that uses a REST API to create chat rooms and connect users with each other. It allows private and group chats, as well as organizing streaming meetings and making audio and video calls. The connection between users is managed through WebRTC, while real-time communication is facilitated with WebSocket, ensuring an interactive and fluid experience."
+          data-es="Aplicación que utiliza una API REST para crear salas de chat y conectar usuarios entre sí. Permite chats privados y grupales, así como la organización de reuniones de streaming y la realización de llamadas de audio y video. La conexión entre los usuarios se gestiona mediante WebRTC, mientras que la comunicación en tiempo real se facilita con WebSocket, asegurando una experiencia interactiva y fluida.">
+          Application that uses a REST API to create chat rooms and connect users with each other. It allows
+          private and group chats, as well as organizing streaming meetings and making audio and video calls.
+          The connection between users is managed through WebRTC, while real-time communication is facilitated
+          with WebSocket, ensuring an interactive and fluid experience.
         </p>
+        <button class="toggle-desc" data-en="Read more" data-es="Leer más">
+          <span class="toggle-text">Read more</span>
+          <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
 
         <div class="tech-badges">
           <span>Vue</span>
@@ -234,17 +272,59 @@
         </div>
 
         <div class="project-links">
+          <a href="#" class="open-gallery" data-project="streaming" data-en="Demo" data-es="Demo">Demo</a>
           <a href="#">GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER / CONTACTO -->
+  <!-- Image Gallery Modal -->
+  <div id="galleryModal" class="gallery-modal">
+    <div class="gallery-container">
+      <button class="gallery-close" aria-label="Close gallery">&times;</button>
+
+      <h2 id="projectTitle" class="gallery-project-title"></h2>
+
+      <div class="gallery-carousel">
+        <button class="gallery-nav gallery-prev" aria-label="Previous image">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="gallery-slide">
+          <div id="galleryLoader" class="gallery-loader"></div>
+          <img id="galleryImage" src="" alt="Project screenshot" />
+          <div class="gallery-caption">
+            <p id="galleryDescription"></p>
+          </div>
+        </div>
+
+        <button class="gallery-nav gallery-next" aria-label="Next image">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="gallery-dots" id="galleryDots"></div>
+
+      <div class="gallery-counter">
+        <span id="galleryCounter">1 / 1</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER / CONTACT -->
   <footer id="contact">
     <div class="footer-content" data-aos="fade-up">
-      <h2>Contacto</h2>
-      <p class="footer-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+      <h2 data-en="Contact" data-es="Contacto">Contact</h2>
+      <p class="footer-subtitle" data-en="Have a project in mind? Let's talk!"
+        data-es="¿Tienes un proyecto en mente? ¡Hablemos!">Have a project in mind? Let's talk!</p>
 
       <div class="contact-links">
         <a href="mailto:javier.xcn18@gmail.com" class="contact-item" data-aos="zoom-in" data-aos-delay="100">
@@ -272,15 +352,17 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-            </path>
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              </path>
           </svg>
           <span>GitHub</span>
         </a>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Desarrollador Web. Todos los derechos reservados.</p>
+        <p data-en="&copy; 2026 Web Developer. All rights reserved."
+          data-es="&copy; 2026 Desarrollador Web. Todos los derechos reservados.">&copy; 2026 Web Developer. All rights
+          reserved.</p>
       </div>
     </div>
   </footer>
