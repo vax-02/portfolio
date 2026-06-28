@@ -47,6 +47,11 @@ function translatePage(lang) {
     if (element.tagName === 'H1') {
       // Special handling for h1 with span
       element.innerHTML = translation;
+    } else if (element.classList.contains('toggle-desc')) {
+      const toggleText = element.querySelector('.toggle-text');
+      if (toggleText) {
+        toggleText.textContent = translation;
+      }
     } else {
       element.textContent = translation;
     }
@@ -108,7 +113,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  initThemeToggle();
+  if (typeof initThemeToggle === 'function') {
+    initThemeToggle();
+  }
 
 
   // GSAP Hero Animations
@@ -307,6 +314,7 @@ function openGallery(projectName) {
 
   const modal = document.getElementById('galleryModal');
   modal.classList.add('active');
+  modal.scrollTop = 0;
   document.body.style.overflow = 'hidden';
 
   loadGalleryImages();
@@ -320,18 +328,20 @@ function closeGallery() {
 }
 
 function loadGalleryImages() {
-  const thumbnailsContainer = document.getElementById('galleryThumbnails');
-  thumbnailsContainer.innerHTML = '';
+  const dotsContainer = document.getElementById('galleryDots');
+  if (!dotsContainer) return;
+
+  dotsContainer.innerHTML = '';
 
   const images = galleryData[currentProject];
   images.forEach((img, index) => {
-    const thumb = document.createElement('img');
-    thumb.src = img.src;
-    thumb.alt = img.title[currentLang];
-    thumb.className = 'gallery-thumbnail';
-    if (index === 0) thumb.classList.add('active');
-    thumb.addEventListener('click', () => showImage(index));
-    thumbnailsContainer.appendChild(thumb);
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'gallery-dot';
+    dot.setAttribute('aria-label', `${index + 1}: ${img.title[currentLang]}`);
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => showImage(index));
+    dotsContainer.appendChild(dot);
   });
 }
 
@@ -346,15 +356,15 @@ function showImage(index) {
   document.getElementById('galleryImage').src = imageData.src;
 
   // Update caption
-  document.getElementById('galleryTitle').textContent = imageData.title[currentLang];
+  document.getElementById('projectTitle').textContent = imageData.title[currentLang];
   document.getElementById('galleryDescription').textContent = imageData.description[currentLang];
 
   // Update counter
   document.getElementById('galleryCounter').textContent = `${index + 1} / ${images.length}`;
 
   // Update thumbnails
-  document.querySelectorAll('.gallery-thumbnail').forEach((thumb, i) => {
-    thumb.classList.toggle('active', i === index);
+  document.querySelectorAll('.gallery-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
   });
 
   // Update navigation buttons
