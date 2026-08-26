@@ -3,8 +3,16 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Developer</title>
+  <title>Javier — Web Developer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web developer specialized in Vue, Node.js and Laravel. I build functional interfaces that solve real problems. View my projects." />
+  <meta name="keywords" content="web developer, frontend, backend, Vue, Node.js, Laravel, portfolio" />
+  <meta name="author" content="Javier" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Javier — Web Developer Portfolio" />
+  <meta property="og:description" content="Web developer specialized in Vue, Node.js and Laravel." />
+  <meta property="og:type" content="website" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +28,18 @@
 
 <body>
 
+  <!-- PARTICLES BACKGROUND -->
+  <div id="particles-js"></div>
+
   <!-- HEADER -->
   <header>
     <div class="logo">&lt;DEV/&gt;</div>
-    <nav>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="mainNav">
       <a href="#sobre" data-en="About" data-es="Sobre mi">About</a>
       <a href="#skills" data-en="Skills" data-es="Skills">Skills</a>
       <a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
@@ -44,31 +60,48 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1 data-en="Hi, I'm Javier a <span>Web Developer</span>"
-        data-es="Hola, soy Javier un <span>Desarrollador Web</span>">Hi, I'm Javier a <span>Web Developer</span></h1>
-      <h2 id="typing"></h2>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span data-en="Available to work" data-es="Disponible para trabajar">Available to work</span>
+      </div>
+      <h1 data-en="Hi, I'm Javier — <span>I build things for the web</span>"
+        data-es="Hola, soy Javier — <span>construyo soluciones web</span>">Hi, I'm Javier — <span>I build things for the web</span></h1>
+      <h2 id="typing"><span class="typing-cursor">|</span></h2>
 
       <div class="cta">
-        <a href="#projects" data-en="View Projects" data-es="Ver proyectos">View Projects</a>
-        <a href="#contact" class="outline" data-en="Contact" data-es="Contactar">Contact</a>
+        <a href="#projects" data-en="See what I've built" data-es="Mira lo que he creado">See what I've built</a>
+        <a href="#contact" class="outline" data-en="Let's work together" data-es="Trabajemos juntos">Let's work together</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/vax-02" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:javier.xcn18@gmail.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
       </div>
     </div>
 
     <div class="profile">
-      <img src="./img/robot.avif" alt="Animated Binary Code" class="profile-image" />
+      <img src="./img/robot.png" alt="Animated Binary Code" class="profile-image" />
     </div>
+
+    <a href="#sobre" class="scroll-indicator" aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </a>
   </section>
 
   <!-- ABOUT -->
   <section id="sobre">
     <h2 data-aos="fade-up" data-en="About Me" data-es="Sobre mí">About Me</h2>
     <p data-aos="fade-up" data-aos-delay="100"
-      data-en="I'm Javier, a developer who enjoys transforming ideas into functional code. I'm interested in building interfaces that not only look good, but solve real problems. When I'm not debugging code, I'm probably exploring new tools or improving existing projects."
-      data-es="Soy Javier, un desarrollador que disfruta transformando ideas en código funcional. Me interesa construir interfaces que no solo se vean bien, sino que resuelvan problemas reales. Cuando no estoy depurando código, probablemente estoy explorando nuevas herramientas o mejorando proyectos existentes.">
-      I'm Javier, a developer who enjoys transforming ideas into functional code.
-      I'm interested in building interfaces that not only look good, but solve real problems.
-      When I'm not debugging code, I'm probably exploring new tools or
-      improving existing projects.
+      data-en="I started in programming out of curiosity, modifying simple websites. That curiosity led me to study Computer Science and specialize in web development. I focus on building interfaces that are not only visually clean, but genuinely useful. Currently I work with Vue, Node.js and Laravel, and I'm always looking for the next challenge to grow."
+      data-es="Empecé en la programación por curiosidad, modificando páginas web simples. Esa curiosidad me llevó a estudiar Informática y especializarme en desarrollo web. Me enfoco en construir interfaces que no solo sean visualmente limpias, sino genuinamente útiles. Actualmente trabajo con Vue, Node.js y Laravel, y siempre busco el siguiente reto para seguir creciendo.">
+      I started in programming out of curiosity, modifying simple websites. That curiosity led me to study Computer Science and specialize in web development. I focus on building interfaces that are not only visually clean, but genuinely useful. Currently I work with Vue, Node.js and Laravel, and I'm always looking for the next challenge to grow.
     </p>
   </section>
 
@@ -325,6 +358,32 @@
       <h2 data-en="Contact" data-es="Contacto">Contact</h2>
       <p class="footer-subtitle" data-en="Have a project in mind? Let's talk!"
         data-es="¿Tienes un proyecto en mente? ¡Hablemos!">Have a project in mind? Let's talk!</p>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm" data-aos="fade-up" data-aos-delay="100">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="name" required placeholder=" " />
+            <label data-en="Name" data-es="Nombre">Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" required placeholder=" " />
+            <label data-en="Email" data-es="Correo">Email</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="4" required placeholder=" "></textarea>
+          <label data-en="Your message..." data-es="Tu mensaje...">Your message...</label>
+        </div>
+        <button type="submit" class="form-submit" data-en="Send Message" data-es="Enviar mensaje">
+          <span>Send Message</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </form>
+
+      <div class="contact-divider">
+        <span data-en="or find me on" data-es="o encuéntrame en">or find me on</span>
+      </div>
 
       <div class="contact-links">
         <a href="mailto:javier.xcn18@gmail.com" class="contact-item" data-aos="zoom-in" data-aos-delay="100">
